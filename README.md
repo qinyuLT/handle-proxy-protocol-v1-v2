@@ -20,7 +20,7 @@
 - demo 中网络通信采用简单的json格式，线上服务采用的是自定义协议头加消息体的形式，都是支持的，只要你的协议头与 PROXY-prococol 协议头不产生冲突就可以
 - 192.168.18.128：代理层以haproxy和nginx作为演示，监听本机的8080端口，转发给本机的业务服务6000端口
 - 192.168.18.129：用于客户端进行telnet测试
-- demo演示截图在imgs文件夹下，如何加载不出来，请自行下载查看。
+- demo演示截图在imgs文件夹下，如何加载不出来，请自行下载查看
 - 编译
 ```c
 g++ -o server example_muduo_tcp_server.cpp -lmuduo_net -lmuduo_base -lpthread
@@ -84,3 +84,4 @@ stream{
 ```
 ![](https://github.com/qinyuLT/handle-proxy-protocol-v1-v2/blob/main/imgs/nginx_proxy_protocol_v1.jpg)
 * TODO 未能找到 nginx 如何配置 PROXY protocol v2版本，线上服务用的是 haproxy，如果有小伙伴知道neginx如何配置 v2版本，欢迎留言。
+
